@@ -11,13 +11,13 @@ func InitLog() {
 	log.SetLevel(getLoggerLevel(os.Getenv("LOG_LEVEL")))
 	log.SetReportCaller(true)
 	log.SetFormatter(&nested.Formatter{
-		HideKeys: true
-		FieldsOrder: []string{"component", "category"},
+		HideKeys:        true,
+		FieldsOrder:     []string{"component", "category"},
 		TimestampFormat: "2006-01-02 15:04:05",
-		ShowFullLevel: true,
-		CallerFirst: true,
+		ShowFullLevel:   true,
+		CallerFirst:     true,
 	})
-	
+
 }
 
 func getLoggerLevel(value string) log.Level {
