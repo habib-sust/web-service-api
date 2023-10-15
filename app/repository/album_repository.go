@@ -9,8 +9,8 @@ import (
 
 type AlbumRepository interface {
 	GetAllAlbums() ([]dao.Album, error)
-	GetAlbumById(id int) (dao.Album, error)
-	AddNewAlbum(album dao.Album) ([]dao.Album, error)
+	GetAlbumById(id string) (dao.Album, error)
+	AddNewAlbum(album *dao.Album) ([]dao.Album, error)
 }
 
 type AlbumRepositoryImpl struct {
