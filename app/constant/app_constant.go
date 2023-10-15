@@ -14,7 +14,7 @@ const (
 	Unauthorized
 )
 
-func (r ResponseStatus) GetResponseStatue() string {
+func (r ResponseStatus) GetResponseStatus() string {
 	return [...]string{
 		"SUCCESS",
 		"DATA_NOT-FOUND",
